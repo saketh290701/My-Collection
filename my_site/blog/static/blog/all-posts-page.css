@@ -1,0 +1,48 @@
+body{
+    background-color: aliceblue;
+
+}
+
+#main-navigation{
+    background-color: rgb(32, 21, 54);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+
+}
+
+#all-posts{
+    margin:7rem auto;
+    width: 90%;
+    max-width: 75rem;
+}
+
+#all-posts h2{
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(44, 5, 5);
+    margin:3rem 0;
+   
+}
+
+#post-container{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+    gap:1.5rem;
+}
+
+
+.post img{
+    width: 5rem;
+    height: 5rem;
+}
+
+.post a{
+    height: 18rem;
+    transform-origin:center ;
+    
+    /* box-shadow: 0 2px 8px rgb(0,0,0,0.4); */
+    border-radius: 12px;
+    background-color: wheat;
+}

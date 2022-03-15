@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+
+{% load static %}
+
+
+{% block title %}My Blog{% endblock %}
+{% block css-files %}
+    <link rel="stylesheet" href="{% static 'blog/includes/single-post.css' %}">
+    <link rel="stylesheet" href="{% static "blog/starting-page.css" %}" >
+{% endblock %}
+{% block content %}
+    
+
+    <section id="welcome">
+        <header>
+            <img src="{% static 'blog/images/book_collection.png' %}" alt="collection"/>
+            <h2>My Collection</h2>
+        </header>
+
+        <p>Hii i am Saketh and I love to read books and travel</p>
+    </section>
+
+    <section id="latest-read">
+        <h2>My latest reads</h2>
+        <ul>
+            {% for post in latest_posts %}
+                {% include "includes/post.html" %}
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>What I Do</h2>
+        <p>I am an undegrad  who is being exposed to all things</p>
+        <p>My goal is to grow as a better person</p>
+    </section>
+
+ 
+{% endblock %}
+ 

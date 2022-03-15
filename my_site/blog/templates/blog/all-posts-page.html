@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}All Posts{% endblock %}
+{% block css-files %}
+<link rel="stylesheet" href="{% static 'blog/includes/single-post.css' %}">
+    <link rel="stylesheet" href="{% static "blog/all-posts-page.css" %}" >
+{% endblock %}
+
+
+{% block content %}
+
+    <section id="all-posts">
+        <h2>My Collected Books</h2>
+        <ul id="post-container">    
+            {% for post in all_posts %}
+                {% include "includes/post.html" %}
+            {% endfor %}  
+        </ul>
+    </section>
+
+
+
+
+
+{% endblock %}

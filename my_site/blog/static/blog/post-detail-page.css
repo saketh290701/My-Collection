@@ -1,0 +1,220 @@
+body{
+    background-color: antiquewhite;
+}
+
+#main-navigation{
+    background-color: rgb(53, 11, 11);
+    box-shadow: rgba(0,0,0,0.25);
+}
+
+#summary{
+    margin:8rem auto 3rem auto;
+    padding:2rem;
+    width: 90%;
+    max-width:90rem;
+    border-radius: 16px;
+    background-color: rgb(3, 56, 56);
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    height: 25rem;
+}
+
+#summary h2{
+    color: aliceblue;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+
+}
+
+
+.tags{
+    background-color: whitesmoke;
+    color:rgb(3, 56, 56) ;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+}
+#summary article{
+    position:absolute;
+    top:2rem;
+    right:3rem;
+    padding: 1rem 2rem ;
+    border-radius: 12px;
+    text-align: right;
+    color:white;
+}
+
+#summary article img{
+    width: 12rem;
+    height: 12rem;
+    border-radius: 12px;
+    transform: rotateZ(5deg);
+    border:5px solid white;
+    margin-bottom: 1rem;
+
+}
+
+#summary address{
+    font-weight: 800;
+
+}
+
+#summary div{
+    color: beige;
+    font-weight: 700; 
+}
+
+
+
+#favourite_button{
+    margin:2rem 0;
+}
+
+#favourite_button button{
+    background-color: transparent;
+    border: 1px solid beige;
+    padding: 0.5rem 2rem;
+    font : inherit;
+    color: bisque;
+   cursor: pointer;
+    border-radius: 5px;
+}
+
+#favourite_button button:hover{
+    background-color: antiquewhite;
+    color: rgb(54, 13, 54);
+}
+
+
+main{
+    margin:4rem auto 3rem auto;
+    padding:2rem;
+    width: 90%;
+    max-width:90rem;
+    border-radius: 16px;
+    background-color: rgb(37, 80, 80);
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    height: 10rem;
+}
+
+main p{
+    position: absolute;
+    font-size: 1.2rem;
+    color: antiquewhite;
+    overflow: auto;
+    padding-right: 1rem;
+
+}
+
+#comment-form{
+    margin: 3rem auto ;
+    padding: 1rem;
+    width :90%;
+    max-width: 30rem;
+    border-radius: 12px;
+    background-color: aliceblue;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+#comment-form button{
+    font: inherit;
+    background-color: rgb(46, 9, 9);
+    color: azure;
+    padding: 0.5rem;
+    border-radius: 12px;
+}
+
+#comment-form button:hover{
+    background-color: rgb(77, 99, 99);
+}
+
+.form-control{
+    margin-bottom:1rem ;
+    padding: 0.5rem;
+
+}
+
+.form-control label{
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    display : block;
+}
+
+.form-control input,
+.form-control textarea{
+    display :block;
+    width: 100%;
+    font: inherit;
+    padding: 0.3rem;
+    border-radius: 5px;
+    border: 1px solid rgb(204, 202, 202);
+
+}
+
+
+.errorlist { 
+    list-style: none;
+    margin: 0.5rem 0 ;
+    padding: 0.2rem;
+    color: rgb(131, 19, 19);
+}
+
+.invalid label{
+    color:  rgb(131, 19, 19);
+}
+
+.invalid input,
+.invalid textarea{
+    border-color:rgb(131, 19, 19); 
+    background-color: rgb(243, 137, 137);
+}
+
+
+
+#error-box{
+    margin:8rem auto 3rem auto; 
+    border : ipx solid rgb(236, 175, 175);
+    background-color: rgb(240, 168, 168);
+    padding: 1rem;
+    width: 90%;
+    max-width: 40rem;
+    border-radius: 6px;
+
+}
+
+#error-box a{
+    text-decoration: none;
+    border: 1px solid rgb(65, 57, 57);
+    background-color:rgb(90, 25, 25);
+    color: white;
+    border-radius: 2px;
+    padding: 0.5rem;
+}
+
+
+#comment_section{
+    margin: 3rem ;
+    margin-left: 5rem;
+    padding: 1rem;
+    width :90%;
+    max-width: 30rem;
+    border-radius: 12px;
+    background-color : beige;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    padding: 1rem 2rem;
+}
+
+
+#comment_section ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#comment_section li{
+    margin-bottom: 1rem;
+    border-bottom: 2px solid rgb(212, 194, 160);
+}
+
+#comment_section li:last-of-type{
+    border-bottom: none;
+}

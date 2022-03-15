@@ -1,0 +1,85 @@
+
+#welcome{
+    text-align: center;
+    background: linear-gradient(to right top,rgb(24, 7, 71),rgb(48, 2, 54));
+    padding: 6rem 12%;
+}
+
+#welcome header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:3rem auto;
+}
+
+#welcome img{
+    width: 10rem;
+    height:10rem;
+    object-fit: cover;
+    object-position: top;
+    border: 5px solid white;
+    border-radius: 12px;
+    background-color: antiquewhite;
+    transform: rotateZ(-5deg);
+    box-shadow: 0 2px 8px rgba(0 ,0 ,0 ,0.25);
+    
+
+}
+
+
+#welcome h2{
+   
+    font-size: 3rem;
+    margin: 0 0 0 2rem;
+    color: antiquewhite;
+    width: 20rem;
+}
+
+#welcome p{
+    color:aliceblue;
+    font-size: 1.5rem;
+
+}
+
+#latest-read{
+    background-color: rgb(174, 199, 191);
+    padding: 2rem;
+    border-radius: 20px ;
+    width: 60%;
+    margin:-5rem auto 2rem auto;
+    box-shadow: 1px 1px 12px rgba(0 ,0 ,0 ,0.5);
+}
+
+#latest-read h2{
+    text-align: center;
+}
+
+#latest-read ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#latest-read li{
+    flex:1;
+    min-height: 50%;
+    
+}
+
+#about{
+    background-color: rgb(160, 126, 126);
+    margin-top: 5rem;
+    text-align: center;
+    padding: 3rem;
+   
+}
+
+#about p{
+    font-size: 1.5rem;
+    color: rgb(46, 9, 9);
+}
+

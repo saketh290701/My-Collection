@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static  %}
+
+{% block css-files %}
+    
+<link rel="stylesheet" href="{% static 'blog/favourite_page.css' %}">
+<link rel="stylesheet" href="{% static 'blog/includes/single-post.css' %}">
+{% endblock  %}
+
+{% block title %}Favourites{% endblock  %}
+
+
+{% block content %}
+
+    
+    <section id="all-posts">
+        {% if not has_posts %}
+        <p>You didnt save any posts</p>
+         {% endif %}
+
+
+        <ul id="post-container">
+            {% for book in favPosts %}
+            
+            <li>
+                <article class="post">
+                
+                <a href="{% url 'post-detail-page' book.slug %}">
+                    <img src="{{ book.image.url }}" alt="{{ book.title }}">
+                    <div class="post_content">
+                    <h3>{{ book.title }}</h3>
+                
+                    <p>{{ book.author }}</p>
+                </div>
+                </a>
+                </article>
+            </li>
+            
+            {% endfor %}
+        </ul>
+
+    </section>
+
+{% endblock  %}

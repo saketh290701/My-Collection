@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{post.title}}{% endblock  %}
+
+{% block css-files %}
+    
+    <link rel="stylesheet" href="{% static "blog/post-detail-page.css" %}">
+{% endblock  %}
+
+{% block content %}
+
+        {% if comment_form.error %}
+        <div id="error-box">
+            <h2>Saving the comment failed</h2>
+            <p>please check the errors</p>
+            <a href="#comment-form">Fix!</a>
+
+        </div>
+
+        {% endif %}
+
+
+
+
+
+
+
+    <section id="summary">
+        <h2>{{post.title}}</h2>
+        <div id="tag_section">
+            {% for tag in post_tags  %}
+            
+            <span class="tags">{{tag.caption}}</span>
+            
+            {% endfor %}
+
+
+        </div>
+        <div id="favourite_button">
+            <form action="{% url 'favourites-page' %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" value="{{ post.id }}" name="post_id">
+                <button>
+                {% if favourited_books %}
+                    Remove    
+                {% else %}
+                    Favourite!
+                {% endif %}
+                </button>
+            </form>
+
+
+        </div>
+
+
+        <article>
+            <img src="{{post.image.url}}" alt="{{post.title}}">
+            <address>{{post.author}}</address>
+            <div>
+                Last read on<span>{{post.completed_date}}</span>
+            </div>
+        </article>
+    </section>
+
+
+
+    <main>
+        <p>{{post.content|linebreaks}}</p>
+    </main>
+
+
+    <section id="comment_section">
+        <h2>Comments!</h2>
+        <ul>
+            {% for comment in comments  %}
+            <li>
+                <h2>{{ comment.user_name}}</h2>
+                <p>{{ comment.text | linebreaks}}</p> 
+            </li>
+            
+            {% endfor %}
+        </ul>
+
+
+
+    </section>
+
+    <section id="comment-form">
+        <h1>Your Comment </h1>
+        <form action="{% url "post-detail-page"  post.slug %}" method="POST">
+            {% csrf_token %}
+            {% for form_field in comment_form %}
+            <div class = "form-control {% if form_field.errors %}invalid{% endif %}">
+
+                {{ form_field.label_tag }}
+                {{ form_field }}
+                {{ form_field.errors }}
+            </div>
+            
+            
+            {% endfor %}
+
+            <!--{{ comment_form }}-->
+            <button>Save Comment</button>
+        </form>
+    </section>
+
+{% endblock  %}
